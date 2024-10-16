@@ -1,0 +1,1335 @@
+/* Tamaño del contenido de toda la pagina*/
+html {
+    font-size: 16px;
+}
+
+/*voy a usar mediasquery para hacer adaptable la letra a un dispositivo diferente*/
+@media screen and(max-width:400px) {
+    html {
+        font-size: 9.41176px;
+    }
+}
+
+/*Los elementos del heigth usaran el 100% de sus contenedores*/
+html,
+body {
+    height: 100%;
+}
+
+/*Se cambiara tanto el tipo de letra, tambien el color del fondo*/
+body {
+    background: #050505f6;
+    /*Seleccionar el tipo de letra en funcion al codio en base*/
+    font-family: 'Afacad+Flux', ;
+    /*La etiqueta rem va a coger el tamaño padre que es 16px y lo multiplicara por 1.7*/
+    font-size: 1.7rem;
+    font-style: normal;
+    /*Hace a la letra un poco mas ancha*/
+    font-weight: normal;
+    /*Es el ancho que existe entre los espacios de las palabras o sangria*/
+    line-height: 1.882;
+    color: black;
+    /*Le va a dar un margen desde el interior de un contenedor hacia el exterior*/
+    margin: 0;
+    /*Le va a dar un margen desde el exterior hacia el interior del contenedor*/
+    padding: 12px;
+}
+
+/*Estilos a los links*/
+a {
+    color: #cf1767;
+    transition: all 0.3s ease-in-out;
+}
+
+/*Transicion de estilos para los links*/
+a:hover,
+/*Le genera un pequeño brillo*/
+a:focus,
+/**/
+a:active {
+    color: white;
+}
+
+/*Al poner el maus encima del link hacer que cambie el color*/
+a:hover,
+a:active {
+    outline: 0;
+}
+
+/*Tipografía*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 .h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: "Frank Ruh1 libre", serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #fff;
+    /*Faltan 2 caracteristicas*/
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4 {
+    /*Margen hacia arriba*/
+    margin-top: 6rem;
+    /*Margen hacia abajo*/
+    margin-bottom: 16rem;
+}
+
+/*Si el dispostivo tiene un tamaño mayor a 600 px hacer*/
+@media screen and(max-width:600px) {
+
+    h1,
+    .h1,
+    h2,
+    .h2,
+    h3,
+    .h3,
+    h4,
+    .h4 {
+        /*Margen hacia arriba*/
+        margin-top: 6rem;
+    }
+}
+
+/*Las etiquetas h5 y h6 estaran acompañadas de una clase cada una*/
+h5,
+.h5,
+h6,
+.h6 {
+    /*esto es solo para dar estilos a las etiquetas h5 y h6*/
+    /*Le daremos un margen de 4.8rem y un margen de 1.2 rem*/
+    margin-top: 4.8rem;
+    margin-bottom: 1.2rem;
+}
+
+/*Estilos del header*/
+.s-header {
+    position: absolute;
+    /*De arriva para abajo*/
+    top: 2rem;
+    /*De derecha a la izquierda*/
+    right: 0;
+    /*De izquierda a la derecha*/
+    left: 0;
+    /*De abajo para arriva*/
+    bottom: 0;
+    width: 100%;
+    border: 1px solid white;
+    height: 78px;
+    text-align: center;
+}
+
+/*Ingreso de una clase la cual me busque la clase llamada header.sticky*/
+/*color del contenedor*/
+/*posicion en forma de fixed*/
+.s-header.sticky {
+    background: #050505;
+    position: fixed;
+    /*Ubicacion de arriba del contenedor es cero*/
+    top: 0;
+    /*Ubicacion de izquiera del contenedor cero*/
+    left: 0;
+}
+
+.header-logo {
+    /*Lo que se tiene en el contenedor que esta en bloque lo transforme en linea*/
+    display: inline-block;
+    /*margen de 6 pixeles en alrededor del contenedor*/
+    margin: 6px 0 0 0;
+    /*El contenedor tendra una posicion absoluto*/
+    position: absolute;
+    /*Ubicacion de la imagen con un 50 porciento en la parte de arriba*/
+    top: 50%;
+    /*Ubicacion en la parte de la izquierda con una ubicacion de 40 pixeles*/
+    left: 40px;
+}
+
+/*ingresamos una clase la cual me busqye la clase logo*/
+.header-logo a {
+
+    display: block;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: none;
+    transition: all .3s;
+}
+
+.header-logo img {
+    width: 132px;
+    height: 36px;
+    margin: 0;
+}
+
+/*una clase con contenedores de forma de bloques*/
+.header-nav-wrap {
+    /*El display quitara el bloque de los contenedores de esta clase*/
+    display: inline-block;
+}
+
+/*Ingreo de otra clase y que busque la etiqueta ul*/
+.header-nav-wrap ul {
+    /*Les quitaremos los bloques*/
+    display: inline-block;
+    /*Que no tenga nada de estilos*/
+    list-style: none;
+    /*Tenga un margen de cero*/
+    margin-left: 0;
+    /*Y incremento de un margen top de 18 pixeles*/
+    margin-top: 18px;
+}
+
+/*Uso de una clase la cual me busque las etiquetas li*/
+.header-nav-wrap li {
+    /*Como son bloques la etiqueta li con inline se lo transforma de forma de lina*/
+    display: inline-block;
+    /*Ingreo de un padding de 0%*/
+    padding: 0;
+}
+
+/*Ingresamos otra clase la cual me busque las etiquetas li y la etiqueta a*/
+.header-nav-wrap li a {
+    /*Esta etiqueta esta en forma de linea*/
+    /*Se le tranformara en bloque*/
+    display: block;
+    /*Definimos el tamaño con una altura de 78 pixeles con una calculacion restando 18 pixeles por 2*/
+    /*78 pixeles sera restado por el resultado realizado dentro de los parentecis*/
+    line-height: calc(78px-(18px*2));
+}
+
+/*Ingreso de una clase*/
+.header-main-nav {
+    /*robot especifica que la fuente del texto probiene del google fonts y se ingresa el tipo de texto
+    que se haya descargado de la plataforma google fonts*/
+    font-family: "roboto", sans-serif;
+    /*El tamaño de la fuente de la clase header-main-nav sera de 13 pixeles de tamaño*/
+    font-size: 13px;
+    /*Se le cambiara el tipo de letra, en este caso se convertira en letras mayusculas todo 
+    la seccion del menu de la clase*/
+    text-transform: uppercase;
+    /*El menu que esta dentro de la clase header-mani-nav tendra ceparaciones las letras
+    de 0.3rem*/
+    /*el rem es para dar la cantidad de espacio a las letras de una o varias palabra*/
+    letter-spacing: 0.3rem;
+    /*Especificamos el color que le daremos al texto del menu, en este caso dar el color gris
+    cuando el usuario coloque el cursor al texto del menu para que cambie del color al que se le coloco*/
+    color: rgba(255, 255, 255, 0.5);
+    /*le especificamos que tendra un margen de 0 pixeles arriba, 0 pixeles a la derecha
+    ,0 pixeles abajo, y 4 pixeles a la izquierda*/
+    margin: 0 0 0 4px;
+    /*El z-index sirve para posicionar la caja en la posicion Z (X,Y,Z grafica de matematicas)*/
+    z-index: 2;
+    /*Tendra un posicionamiento estatico, quiere decir que las palabras del menu no se moveran
+    cuando el usuario mueva la barra de arriba hacia abajo*/
+    position: static;
+}
+
+/*Nuetra clase header-main-nav busque la etiqueta li*/
+.header-main-nav li {
+    /*Ingreso de un margen que me de espacio el texto del menu en arriba, abajo, derecha, izquierda*/
+    margin: 0 2rem;
+}
+
+/*la clase header-main-nav busque la etiqueta a*/
+.header-main-nav a {
+    /*Ingresaremos el color con el rgba (red, green, blue, alpha) para dar color a nuestro texto del menu*/
+    /*Se especifica que todas las etiquetas a que estan dentro de mi clase header cambien de color a gris*/
+    color: rgba(255, 255, 255, 0.5);
+    /*Ingresaremos una posicion relativa, posicion donde no se quedara estatica*/
+    position: relative;
+}
+
+/*Dentro de la clase  busque la etiqueta "a" la cual dara estilo hover para aplica el estilo cuando 
+el usuario pasa el ratón sobre el enlace*/
+.header-main-nav a:hover,
+/*Dentro de la clase busque la etiqueta "a" la cual dara estilo focus para aplica el estilo cuando 
+el enlace recibe el foco, como al usar el teclado para navegar*/
+.header-main-nav a:focus,
+/*Dentro de la clase busque la etiqueta "a" la cual dara estilo active para aplica el estilo mientras 
+el enlace está siendo clicado o activado.*/
+.header-main-nav a:active {
+    /*Dar color al a las opciones del menu cuando el usuario pase el raton a las opciones para que
+    se cambie de color blanco*/
+    color: white;
+}
+
+/*La clase header-main-nav busque la clase current la cual dentro de la clase current busque la etiqueta "a"*/
+.header-main-nav .current a {
+    /*Especifica que le dara color blanco a la seccion de "introduccion" de nuestro menu*/
+    color: white;
+}
+
+/*le daremos estilos a los iconos de las redes sociales*/
+/*Ingreso de la clase definida a los iconos de las redes sociales*/
+.header-social {
+    /*Especifica el tamaño de la fuente de los iconos de las redes sociales, este caso 2rem de tamaño*/
+    font-size: 2rem;
+    /*Eliminara todos los margenes externos*/
+    /*No habra ningun espacio en los cuatro lados: Arriba, Derecha, Abajo, Izquierda*/
+    margin: 0;
+    /*Posicion absoluta una posicion que no se movera*/
+    position: absolute;
+    top: 0;
+    right: 40px;
+}
+
+/*Dentro de nuestra clase de iconos de redes sociales busque la etiqueta li*/
+.header-social li {
+    /*Especifica que se mueva 1 rem a la derecha*/
+    margin-right: 1rem;
+}
+
+/*Ingreso de una Pseudo Clase*/
+/*Dentro de la clase header-social busuqe la etiqueta li, y dentro de la etiqueta li busque la clase last-child*/
+.header-social li:last-child {
+    /*Especifico que me mueva los iconos en 0 posicion*/
+    margin-right: 0;
+}
+
+/*Dentro de nuestra clase header-social me busque las etiquetas li y a*/
+.header-social li a {
+    /*Esto dara como resultado dar color a los iconos de las redes sociales*/
+    /*el alpha 0.5 es para darle la transparencia a los iconos*/
+    color: rgb(255, 255, 255, 0.5)
+}
+
+/*----------------------------------------------------------------------------------------
+* # menu trigger
+*-----------------------------------------------------------------------------------------*/
+/*la clase asignada*/
+.header-menu-toggle {
+    /*el diseño no ocupara espacio*/
+    display: none;
+    /*42 pixeles de largo*/
+    height: 42px;
+    /*42 pixeles de ancho*/
+    width: 42px;
+    /*el contenido ce centre con 42 pixeles*/
+    line-height: 42px;
+    /*tipo de letra del contenido*/
+    font-family: "Lora", serif;
+    /*tamaño del contenido de 1.4rem*/
+    font-size: 1.4rem;
+    /*texto con letras mayusculas*/
+    text-transform: uppercase;
+    /*espacion de las letras de 2rem*/
+    letter-spacing: .2rem;
+    /*Color del contenido*/
+    color: rgba(255, 255, 255, 0.5);
+    /*transicion de estilo*/
+    transition: all .3s;
+    /*sera posicion absoluta (congelada)*/
+    position: absolute;
+    /*cotenido de 32 pixeles a la derecha*/
+    right: 32px;
+    /*Contenido de 18 pixeles a la parte de arriba*/
+    top: 18px;
+}
+
+.header-menu-toggle:hover,
+.header-menu-toggle:focus {
+    /*Cambiara de color blanco el contenido cuando el cursos se este en el objetivo*/
+    color: #ffffff;
+}
+
+/*esta clase buscara la etiqueta span*/
+.header-menu-toggle span {
+    /*visualizara la etiqueta span como bloque*/
+    display: block;
+    /*24 pixeeles en la altura*/
+    width: 24px;
+    /*2 pixeles de ancho*/
+    height: 2px;
+    /*ajustara la imagen en menos de 1 pixel*/
+    margin-top: -1px;
+    /*Color del contenedor*/
+    background-color: #ffffff;
+    /*dara una transicion de estilo*/
+    transition: all .5s;
+    /*removera el texto*/
+    font: 0/0 a;
+    /*eliminara las sombras del contenido*/
+    text-shadow: none;
+    /*El color de contenido transparente*/
+    color: transparent;
+    /*Tendra posicion absoluta (Estatica)*/
+    position: absolute;
+    /*Contenido de 50% hacia arriba*/
+    top: 50%;
+    /*9 pixeles en la parte de abajo*/
+    left: 9px;
+    /*no tendra dezplasamiento en la derecha*/
+    right: auto;
+    /*No tendra dezplasamiento a la izquierda*/
+    bottom: auto;
+}
+
+.header-menu-toggle span::before,
+.header-menu-toggle span::after {
+    /*Inserta contenido vacío para la barra tanto superior como el inferior*/
+    content: '';
+    /*ancho del span original*/
+    width: 100%;
+    /*alto del span original*/
+    height: 100%;
+    /*Heredara el color del span que sera blanco*/
+    background-color: inherit;
+    /*Tendra un posicionamiento absoluto dentro del contenedor*/
+    position: absolute;
+    /*0 pixeles hacia la parte de abajo*/
+    left: 0;
+    /*Tendra una transición suave en cambios de estilo*/
+    transition: all .5s;
+}
+
+.header-menu-toggle span::before {
+    /*Mueve la barra -9 pixeles hacia arriba*/
+    top: -9px;
+}
+
+.header-menu-toggle span::after {
+    /*Mueve la barra -9 pixeles hacia abajo*/
+    bottom: -9px;
+}
+
+.header-menu-toggle.is-clicked span {
+    /*color en el contenido*/
+    background-color: rgba(255, 255, 255, 0);
+    /*Contiene transición más rápida para el cambio de color*/
+    transition: all .1s;
+}
+
+.header-menu-toggle.is-clicked span::before,
+.header-menu-toggle.is-clicked span::after {
+    /*mantendra su contenido en color blanco*/
+    background-color: white;
+}
+
+.header-menu-toggle.is-clicked span::before {
+    /*no se movera a la part ede arriba*/
+    top: 0;
+    /*Rotación en navegadores Webkit*/
+    -webkit-transform: rotate(135deg);
+    /*Rota la barra superior de 135 grados para formar una X*/
+    transform: rotate(135deg);
+}
+
+.header-menu-toggle.is-clicked span::after {
+    /*Coloca la barra inferior en la posición central*/
+    bottom: 0;
+    /*Rotación en navegadores de 255 grado de Webkit*/
+    -webkit-transform: rotate(225deg);
+    /*Rota la barra inferior 225 grados para completar la X*/
+    transform: rotate(225deg);
+}
+
+/*-----------------------------------------------------------------
+* responsive
+* header
+--------------------------------------------------------------------*/
+@media screen and (max-width: 1200px) {
+    .header-main-nav {
+        /*Reduce el tamaño de la fuente de 12 pixeles*/
+        font-size: 12px;
+    }
+
+    .header-main-nav li {
+        /*Reduce el margen lateral de los elementos de la lista de navegación*/
+        margin: 0 1.4rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .s-header {
+        /*Alineara el contenido del header a la derecha*/
+        text-align: right;
+    }
+
+    .header-nav-wrap {
+        /*Añadira un margen derecho al contenedor de navegación de 36 pixeles*/
+        margin-right: 36px;
+    }
+
+    .header-nav-wrap .header-social {
+        /*Ocultara los iconos de visuales de las redes sociales*/
+        display: none;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .s-header {
+        background-color: #050505;
+        position: fixed;
+        /*Hace que el encabezado sea fijo en la parte superior de la pantalla*/
+        top: 0;
+    }
+
+    .header-logo img {
+        /*128 pixeles de alto*/
+        width: 128px;
+        /*30 pixeles de ancho*/
+        height: 30px;
+    }
+
+    .header-nav-wrap {
+        /*Oculta el menú de navegación por defecto*/
+        display: none;
+        text-align: left;
+        height: auto;
+        /*El contenido ocupara el 100% de ancho de la pantalla*/
+        width: 100%;
+        /**Color negro del contenedor*/
+        background-color: #050505;
+        /*Añade padding para crear un espacio adecuado dentro del menú*/
+        padding: 120px 44px 64px;
+    }
+
+    .header-nav-wrap .header-main-nav {
+        /*Hace que el menú de navegación sea visible en bloque*/
+        display: block;
+        padding-left: 0;
+        height: auto;
+        margin: 0 0 4rem 0;
+        /*Tendra un borde de 1 pixel solido con color gris y invisible de 0.05*/
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .header-nav-wrap .header-main-nav li {
+        /*Cada elemento del menú de navegación se muestrara en su línea*/
+        display: block;
+        margin: 0;
+        padding: 0;
+        /*Borde del boton sera de 1 pixel solido de color gris con invisible de 0.05*/
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .header-nav-wrap .header-main-nav li a {
+        padding: 18px 0;
+        /*Ajusta el relleno y la altura de línea de los enlaces de navegación*/
+        line-height: 20px;
+    }
+
+    .header-nav-wrap .header-social {
+        /*Transformara que los iconos de redes sociales se muestren nuevamente*/
+        display: block;
+        position: static;
+    }
+
+    .header-nav-wrap .header-social li {
+        /*Ajustara el tamaño de fuente y el margen de los iconos de las redes sociales*/
+        font-size: 1.8rem;
+        margin-right: 1.6rem;
+    }
+
+    .header-nav-wrap .header-social li a {
+        /*Ajusta la altura de línea para los iconos en 36 pixeles de ancho*/
+        line-height: 36px;
+    }
+
+    .header-menu-toggle {
+        /*Muestra el botón de menú "hamburguesa"*/
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .header-logo {
+        /*Ajustara la posición del logo para que se alinie a la izquierda*/
+        left: 35px;
+    }
+}
+
+/*--------------------------------------------------------------------------------------------
+  * hacer que el menu sea visible en una pantalla larga para el usuario
+  ---------------------------------------------------------------------------------------------*/
+@media only screen and (min-width:801px) {
+    .header-nav-wrap {
+        /*Hace que el menú sea siempre visible en pantallas*/
+        display: block !important;
+    }
+}
+
+/* ===================================================================
+ * # intro 
+ *
+ * ------------------------------------------------------------------- */
+.s-intro {
+    /*Ocupa todo el ancho disponible de la pantalla*/
+    width: 100%;
+    /*Ocupa el 100% de la altura del viewport*/
+    height: 100vh;
+    /*Establece una altura mínima de 792px para asegurar un diseño consistente en pantallas más pequeñas*/
+    min-height: 792px;
+    ;
+    /*color negro del contendor*/
+    background-color: #050505
+}
+
+.intro-content {
+    /*Ocupa toda la altura del contenedor*/
+    height: 100%;
+    max-width: 1140px;
+    /*Limita el ancho máximo a 1140px para evitar que el contenido se extienda demasiado en pantallas grandes*/
+    padding-top: 20vh;
+    /*Añade un espacio superior del 20% del viewport para centrar verticalmente el contenido*/
+    -webkit-align-items: center;
+    /*Alinea los elementos verticalmente al centro (soporte para navegadores Webkit)*/
+    -ms-flex-align: center;
+    /*Alineación vertical centrada para navegadores antiguos de Microsoft*/
+    align-items: center;
+    /*Alineación vertical centrada con flexbox*/
+    position: relative;
+    /*Permite posicionar elementos hijos de forma absoluta dentro de este contenedor*/
+}
+
+.intro-pic {
+    background-color: #02182c;
+    /*Color de fondo azul oscuro para mejorar el contraste con la imagen*/
+    background-repeat: no-repeat;
+    /*Evita que la imagen de fondo se repita*/
+    background-position: top center;
+    /*Posiciona la imagen centrada horizontalmente y en la parte superior*/
+    background-image: url(../imagen/hero-pic.jpg);
+    /*Carga la imagen de fondo desde la carpeta indicada*/
+    background-size: cover;
+    /*Escala la imagen para cubrir completamente el contenedor sin distorsión*/
+    position: absolute;
+    /*Permite posicionarlo en relación al contenedor padre*/
+    top: 20%;
+    /*Separa el contenido desde la parte superior del contenedor*/
+    right: 0;
+    bottom: 0;
+    left: 50%;
+    /*Coloca la imagen en la mitad derecha de la pantalla*/
+}
+
+.intro-pic::before {
+    content: "";
+    /*Inserta un pseudo-elemento vacío para superponer un filtro*/
+    position: absolute;
+    /*Posiciona el pseudo-elemento sobre la imagen*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    /*Cubre todo el ancho del contenedor*/
+    height: 100%;
+    /*Cubre toda la altura del contenedo*/
+    background-color: #000000;
+    /*Añade un fondo negro*/
+    opacity: .2;
+    /*Aplica una opacidad para crear un efecto de oscurecimiento*/
+}
+
+.intro-grid {
+    background-image: url(../imagen/pattern-dot-grid.svg);
+    /*Aplica una cuadrícula de puntos como fondo*/
+    background-size: 24px 24px;
+    /*Define el tamaño del patrón para que cada punto se repita cada 24px*/
+    opacity: .15;
+    /*Hace la cuadrícula ligeramente transparente*/
+    position: absolute;
+    /*Posiciona la cuadrícula sobre el contenido*/
+    top: 30%;
+    /*Comienza 30% hacia abajo desde la parte superior del contenedor*/
+    right: 0;
+    bottom: 0;
+    left: 30%;
+    /*Cubre la parte derecha del contenedor a partir del 30% desde la izquierda*/
+}
+
+.intro-text {
+    -webkit-transform: translate3d(0, -3.6rem, 0);
+    /*Mueve el texto hacia arriba en navegadores Webkit*/
+    transform: translate3d(0, -3.6rem, 0);
+    /*Mueve el texto hacia arriba 3.6rem*/
+    position: static;
+    /*No aplica ningún posicionamiento especial, sigue el flujo natural del documento*/
+    z-index: 1;
+    /*Asegura que este contenido aparezca encima de otros elementos*/
+}
+
+.intro-text h3 {
+    font-family: "Roboto", sans-serif;
+    /*Aplica la fuente Roboto*/
+    font-size: 2.4rem;
+    /*Define un tamaño de fuente medio para el subtítulo*/
+    font-weight: 500;
+    /*Aplica un peso medio de la fuente*/
+    line-height: 1.333;
+    /*Controla el espaciado vertical entre las líneas de texto*/
+    color: #cf1767;
+    /*Color rosa intenso para destacar el subtítulo*/
+    margin-top: 0;
+    /*Elimina el margen superior*/
+}
+
+.intro-text h1 {
+    font-size: 7.8rem;
+    /*Define un tamaño grande para el título*/
+    font-weight: 500;
+    /*Peso medio de la fuente para mantener un estilo limpio*/
+    line-height: 1.179;
+    /*Espaciado ajustado entre las líneas del título*/
+    color: #ffffff;
+    /*Texto blanco para buen contraste con el fondo oscuro*/
+    margin-top: 0;
+    /*Elimina el margen superior*/
+}
+
+.intro-scroll {
+    font-family: "Roboto", sans-serif;
+    /*Usa la fuente Roboto para consistencia tipográfica*/
+    font-weight: 400;
+    /*Aplica un peso normal de la fuente*/
+    font-size: 1.2rem;
+    /*Define un tamaño pequeño para el texto de desplazamiento*/
+    line-height: 2;
+    /*Aumenta el espaciado entre las líneas*/
+    text-transform: uppercase;
+    /*Convierte el texto a mayúsculas*/
+    letter-spacing: .3rem;
+    /*Añade espacio entre las letras para mejorar la legibilidad*/
+    position: absolute;
+    /*Posiciona este elemento en la parte inferior izquierda del contenedor*/
+    bottom: 8rem;
+    /*Coloca el texto 8rem arriba del borde inferior*/
+    left: 24px;
+    /*Separa el texto 24px desde el borde izquierdo*/
+    z-index: 1;
+    /*Asegura que el texto esté en una capa visible sobre otros elementos*/
+}
+
+.intro-scroll a {
+    display: inline-block;
+    /*color de nelace de gris con invisible de 0.3*/
+    color: rgba(255, 255, 255, 0.3);
+    /*Aplica un color blanco semitransparente al enlace*/
+    position: relative;
+    /*Permite posicionar el pseudo-elemento*/
+    padding-right: 8.8rem;
+    /*Añade espacio a la derecha de 8.8rem*/
+}
+
+.intro-scroll a::after {
+    content: "";
+    /*Inserta un pseudo-elemento vacío para un subrayad*/
+    position: absolute;
+    /*Posiciona este pseudo-elemento arriba*/
+    top: 50%;
+    /*Alinea verticalmente en 0*/
+    right: 0;
+    /*Define un grosor de 1px*/
+    height: 1px;
+    width: 72px;
+    /*Define la longitud*/
+    background-color: #cf1767;
+    /*Aplica el mismo color rosa al subtítulo*/
+}
+
+/* ------------------------------------------------------------------- 
+ * responsive:
+ * intro
+ * ------------------------------------------------------------------- */
+@media screen and (max-width: 1400px) {
+    .intro-text h3 {
+        font-size: 2.2rem;
+        /* Reduce ligeramente el tamaño del subtítulo en pantallas medianas */
+    }
+
+    .intro-text h1 {
+        font-size: 7.2rem;
+        /* Ajusta el tamaño del título para mantener legibilidad en pantallas más pequeñas */
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .intro-content {
+        max-width: 1000px;
+        /* Reduce el ancho máximo del contenido para mejorar la presentación */
+    }
+
+    .intro-text h3 {
+        font-size: 2rem;
+        /* Nueva reducción del tamaño del subtítulo */
+    }
+
+    .intro-text h1 {
+        font-size: 7rem;
+        /* Reduce el tamaño del título */
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .s-intro {
+        max-height: 800px;
+        /* Establece una altura máxima más controlada en dispositivos como tablets */
+    }
+
+    .intro-text h1 {
+        font-size: 6.2rem;
+        /* Ajusta el título para pantallas más pequeñas */
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .intro-text h1 {
+        font-size: 6rem;
+        /* Sigue reduciendo el título para pantallas intermedias */
+    }
+
+    .intro-text br {
+        display: none;
+        /* Elimina los saltos de línea para evitar demasiado espacio vertical */
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .intro-content {
+        width: 88%;
+        /* Reduce el ancho del contenido para dispositivos más pequeños */
+        padding-top: 8rem;
+        /* Ajusta el padding superior para mantener el diseño limpio */
+    }
+
+    .intro-pic {
+        top: 12%;
+        /* Mueve la imagen más cerca de la parte superior */
+        left: 40%;
+        /* Ajusta la posición horizontal para mantener balance */
+    }
+
+    .intro-pic::before {
+        opacity: .4;
+        /* Incrementa la opacidad del filtro para mayor contraste */
+    }
+
+    .intro-grid {
+        top: 20%;
+        /* Ajusta la posición del patrón de fondo */
+        opacity: .1;
+        /* Hace el fondo más sutil */
+    }
+
+    .intro-text h3 {
+        font-size: 1.8rem;
+        /* Tamaño del texto de 1.8rem */
+    }
+
+    .intro-text h1 {
+        font-size: 5.6rem;
+        /* Tamaño del texto de 5.6rem */
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .intro-text h1 {
+        font-size: 5rem;
+        /* Tamaño del titulo de 5rem*/
+    }
+
+    .intro-pic {
+        left: 30%;
+        /* Ajusta la posición de la imagen hacia la izquierda un 30%*/
+    }
+
+    .intro-grid {
+        left: 15%;
+        /* Ajusta la posición del patrón de fondo al 15%*/
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .s-intro {
+        max-height: none;
+        /* Elimina la restricción de altura para dispositivos muy pequeños */
+    }
+
+    .intro-content {
+        width: auto;
+        /* Permite que el contenido ocupe todo el espacio disponible */
+    }
+
+    .intro-pic {
+        left: 20%;
+        /* Desplaza aún más la imagen hacia la izquierda */
+    }
+
+    .intro-grid {
+        left: 10%;
+        /* Ajusta la posición del patrón de fondo */
+    }
+
+    .intro-text {
+        -webkit-transform: translate3d(0, -4.8rem, 0);
+        transform: translate3d(0, -4.8rem, 0);
+        /* Desplaza el texto más arriba */
+    }
+
+    .intro-text h1 {
+        font-size: 4.8rem;
+        /* Reduce aún más el tamaño del título */
+    }
+
+    .intro-scroll {
+        font-size: 1.1rem;
+        /* Ajusta el tamaño del texto de desplazamiento */
+        left: 30px;
+        /* Ajusta la posición horizontal del texto */
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .s-intro {
+        min-height: 656px;
+        /* Ajusta la altura mínima para pantallas muy pequeñas */
+    }
+
+    .intro-text h1 {
+        font-size: 4.5rem;
+        /* Reduce el tamaño del título para dispositivos compactos */
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .intro-text h1 {
+        font-size: 4.2rem;
+        /* Último ajuste del título para pantallas extremadamente pequeñas */
+    }
+}
+
+/* ===================================================================
+ * # about
+ * Sección de "About" para presentar información personal o empresarial
+ * ------------------------------------------------------------------- */
+.s-about {
+    padding-top: 19.2rem;
+    /* Espacio superior amplio para separar la sección del contenido anterior */
+    padding-bottom: 16.8rem;
+    /* Espacio inferior para mantener consistencia visual */
+    background-color: #ffffff;
+    /* Fondo blanco para un contraste claro */
+}
+
+.s-about .row {
+    max-width: 1140px;
+    /* Define un ancho máximo para evitar que el contenido se extienda demasiado */
+}
+
+.s-about>[class*="about-"] {
+    margin-bottom: 15.2rem;
+    /* Añade espacio entre cada bloque de contenido */
+}
+
+.s-about>[class*="about-"]:last-child {
+    margin-bottom: 0;
+    /* Elimina el margen inferior del último elemento */
+}
+
+.about-me__text {
+    -webkit-columns: 2 360px;
+    /* Divide el texto en dos columnas de 360px en navegadores Webkit */
+    -moz-columns: 2 360px;
+    /* Soporte para navegadores Mozilla */
+    columns: 2 360px;
+    /* Divide el contenido en dos columnas de 360px */
+    column-gap: 64px;
+    /* Añade un espacio de 64px entre columnas */
+}
+
+.about-me__buttons {
+    margin-top: 4.8rem;
+    /* Añade espacio superior para separar los botones del texto */
+}
+
+.about-me__buttons .column:first-child {
+    padding-right: 32px;
+    /* Añade espacio derecho al primer botón */
+}
+
+.about-me__buttons .column:last-child {
+    padding-left: 32px;
+    /* Añade espacio izquierdo al último botón */
+}
+
+/* -------------------------------------------------------------------
+   * ## timeline
+   * ------------------------------------------------------------------- */
+.about-experience__timeline {
+    margin-top: 1.6rem;
+    /* Espacio superior entre esta sección y el contenido anterior */
+}
+
+.about-experience__timeline .column:first-child {
+    padding-right: 40px;
+    /* Espacio derecho para separar el primer bloque de la línea central */
+}
+
+.about-experience__timeline .column:last-child {
+    padding-left: 40px;
+    /* Espacio izquierdo para el último bloque */
+}
+
+.timeline {
+    padding-top: 4.8rem;
+    /* Espacio superior dentro de la línea de tiempo */
+    position: relative;
+    /* Posiciona el contenedor relativo para los elementos internos absolutos */
+}
+
+.timeline::before {
+    content: "";
+    /* Línea vertical decorativa para conectar los eventos */
+    display: block;
+    width: 1px;
+    /* Define el grosor de la línea */
+    height: 100%;
+    /* Cubre toda la altura disponible */
+    background-color: rgba(0, 0, 0, 0.12);
+    /* Color gris claro */
+    position: absolute;
+    left: 0;
+    /* Alineada a la izquierda */
+    top: 0;
+    /* Empieza en la parte superior */
+}
+
+.timeline::after {
+    content: "";
+    /* Línea horizontal al inicio de la línea de tiempo */
+    display: block;
+    width: 5.6rem;
+    /* Ancho de la línea */
+    height: 1px;
+    /* Grosor */
+    background-color: rgba(0, 0, 0, 0.12);
+    /* Color similar al de la línea vertical */
+    position: absolute;
+    left: 1px;
+    /* Ligeramente desplazada hacia la derecha */
+    top: 0;
+}
+
+.timeline__icon-wrap {
+    display: block;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    /* Hace el contenedor circular */
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    /* Borde gris para destacar el ícono */
+    position: absolute;
+    top: -2.2rem;
+    /* Desplaza el contenedor hacia arriba */
+    left: 5.6rem;
+    /* Alinea el círculo en relación con la línea central */
+}
+
+.timeline__icon {
+    display: block;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-repeat: no-repeat;
+    /* Evita la repetición del ícono */
+    background-position: center center;
+    /* Centra la imagen dentro del círculo */
+    background-size: contain;
+    /* Asegura que la imagen encaje sin recortes */
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+    /* Centra el ícono dentro de su contenedor */
+    position: absolute;
+    left: 50%;
+    /* Posición horizontal centrada */
+    top: 50%;
+    /* Posición vertical centrada */
+}
+
+.timeline__icon--work {
+    background-image: url(../imagen/icons/icon-briefcase.svg);
+    /* Ícono de maletín para experiencias laborales */
+}
+
+.timeline__icon--education {
+    background-image: url(../imagen/icons/icon-education.svg);
+    /* Ícono de educación para estudios académicos */
+}
+
+.timeline__block {
+    position: relative;
+    padding-left: 5.6rem;
+    /* Desplaza el contenido a la derecha para evitar la línea */
+    padding-bottom: .8rem;
+    /* Espacio inferior entre los bloques */
+    margin-top: 2.8rem;
+    /* Espacio entre cada evento */
+    min-height: 35.6rem;
+    /* Altura mínima para mantener uniformidad entre los bloques */
+}
+
+.timeline .timeline__block:last-child {
+    padding-bottom: 0;
+    /* Elimina el espacio inferior del último bloque */
+}
+
+.timeline__bullet {
+    content: "";
+    /* Elemento visual que representa un marcador en la línea */
+    display: block;
+    width: 3px;
+    /* Grosor del marcador */
+    height: 4.8rem;
+    /* Altura del marcador */
+    background-color: #000000;
+    /* Color negro */
+    position: absolute;
+    left: -1px;
+    /* Alineado ligeramente hacia la izquierda de la línea */
+    top: 8px;
+    /* Desplazamiento desde la parte superior del contenedor */
+}
+
+.timeline__header {
+    margin-bottom: 3.2rem;
+    /* Espacio inferior entre el encabezado y el contenido del bloque */
+}
+
+.timeline_header .timeline_timeframe,
+.timeline__header h5 {
+    font-family: "Roboto", sans-serif;
+    /* Uso consistente de la tipografía Roboto */
+}
+
+.timeline_header .timeline_timeframe {
+    font-size: 1.4rem;
+    /* Tamaño del texto que muestra el periodo del evento */
+    font-weight: 400;
+    /* Peso del texto normal */
+    line-height: 1.714;
+    /* Espacio entre líneas */
+    text-transform: uppercase;
+    /* Convierte el texto a mayúsculas */
+    letter-spacing: .3rem;
+    /* Espaciado adicional entre letras */
+    margin-bottom: .8rem;
+    /* Espacio entre el periodo y el título del evento */
+    color: #000000;
+    /* Color negro */
+}
+
+.timeline__header h3 {
+    margin-bottom: 0;
+    /* Elimina el margen inferior del título principal */
+}
+
+.timeline__header h5 {
+    font-size: 2.1rem;
+    /* Tamaño del subtítulo */
+    font-weight: 400;
+    /* Peso del subtítulo */
+    line-height: 1.333;
+    /* Espaciado entre líneas */
+    margin-top: 0;
+    /* Elimina el margen superior del subtítulo */
+}
+
+/* ------------------------------------------------------------------- 
+   * responsive:
+   * about
+   * ------------------------------------------------------------------- */
+@media screen and (max-width:1200px) {
+    .s-about {
+        padding-top: 17.2rem;
+        /* Reduce el padding superior para pantallas más pequeñas */
+        padding-bottom: 15.6rem;
+        /* Ajusta el padding inferior */
+    }
+
+    .about-experience__timeline .column:first-child {
+        padding-right: 30px;
+        /* Reduce espacio entre el primer bloque y la línea */
+    }
+
+    .about-experience__timeline .column::last-child {
+        padding-left: 30px;
+        /* Reduce espacio en el último bloque */
+    }
+
+    .timeline::after {
+        width: 4.4rem;
+        /* Disminuye la línea horizontal decorativa */
+    }
+
+    .timeline__icon-wrap {
+        left: 4.4rem;
+        /* Alinea los íconos con la línea central */
+    }
+
+    .timeline__block {
+        padding-left: 4.4rem;
+        /* Ajusta el contenido respecto a la línea */
+    }
+
+    .timeline__header h5 {
+        font-size: 1.8rem;
+        /* Disminuye el tamaño del subtítulo */
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .about-me__text {
+        column-gap: 40px;
+        /* Reduce la separación entre columnas */
+    }
+
+    .about-me__buttons .column:first-child {
+        padding-right: 20px;
+        /* Ajusta los botones para espacios más pequeños */
+    }
+
+    .about-me__buttons .column:last-child {
+        padding-left: 20px;
+    }
+
+    .about-experience__timeline .column:first-child {
+        padding-right: 16px;
+        /* Espacio reducido para columnas */
+    }
+
+    .about-experience__timeline .column:last-child {
+        padding-left: 16px;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .s-about .row {
+        max-width: 700px;
+        /* Limita el ancho máximo del contenedor en un 700 pixeles */
+    }
+
+    .about-me__buttons .column:first-child {
+        padding-right: 16px;
+    }
+
+    .about-me__buttons .column:last-child {
+        padding-left: 16px;
+    }
+
+    .about-experience__timeline .column {
+        flex: 0 0 100%;
+        /* Asegura que cada columna ocupe el 100% del ancho disponible */
+        max-width: 100%;
+        /* Evita que las columnas se desborden */
+    }
+
+    .about-experience__timeline .column:first-child {
+        margin-bottom: 9.6rem;
+        /* Espacio adicional entre las columnas */
+    }
+
+    .timeline::after {
+        width: 5.6rem;
+        /* Aumenta la línea decorativa horizontal */
+    }
+
+    .timeline__icon-wrap {
+        left: 5.6rem;
+        /* Alinea los íconos a la nueva posición de la línea */
+    }
+
+    .timeline__block {
+        min-height: 0;
+        /* Elimina la altura mínima en pantallas más pequeñas */
+        padding-left: 5.6rem;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .s-about {
+        padding-top: 16rem;
+        /* Reduce el padding superior */
+    }
+
+    .s-about .row {
+        max-width: 600px;
+        /* Ajusta el ancho del contenedor */
+    }
+}
+
+@media screen and (max-width:600px) {
+
+    .about-me__buttons .column:first-child,
+    .about-experience__timeline .column:first-child {
+        padding-right: 10px;
+        /* Espacio más reducido entre los bloques */
+    }
+
+    .about-me__buttons .column:last-child,
+    .about-experience__timeline .column:last-child {
+        padding-left: 10px;
+    }
+
+    .timeline::after {
+        width: 4.4rem;
+        /* Reduce la línea horizontal */
+    }
+
+    .timeline__icon-wrap {
+        left: 4.4rem;
+    }
+
+    .timeline__block {
+        padding-left: 4.4rem;
+    }
+
+    .timeline__header h5 {
+        font-size: 1.8rem;
+        /* Ajusta el tamaño del subtítulo */
+    }
+}
+
+@media screen and (max-width:400px) {
+    .s-about>[class*="about-"] {
+        margin-bottom: 14rem;
+        /* Ajusta el espacio entre secciones */
+    }
+
+    .about-me__buttons .column:first-child,
+    .about-experience__timeline .column:first-child {
+        padding-right: 0;
+        /* Elimina el padding en pantallas muy pequeñas */
+    }
+
+    .about-me__buttons .column:last-child,
+    .about-experience__timeline .column:last-child {
+        padding-left: 0;
+    }
+
+    .timeline::after {
+        width: 2.8rem;
+        /* Disminuye aún más la línea decorativa */
+    }
+
+    .timeline__icon-wrap {
+        left: 2.8rem;
+        /* Ajusta la alineación de los íconos */
+    }
+
+    .timeline__block {
+        padding-left: 2.8rem;
+        /* Desplaza el contenido acorde a la línea */
+    }
+}
